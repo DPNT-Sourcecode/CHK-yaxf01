@@ -2,5 +2,6 @@ from lib.solutions.HLO import hello_solution
 
 class TestHelo():
     def test_Helo(self):
-        assert hello_solution.hello('pineapple') == 'pineapple'
+        assert hello_solution.hello('pineapple') == 'Hello, World!'
+
 
