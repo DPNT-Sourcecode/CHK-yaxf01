@@ -7,7 +7,7 @@ def checkout(skus):
         return -1
 
     skus = skus.lower()
-    selectedItems = skus.split(',')
+    selectedItems = list(skus)
 
     totalprice = 0
 
@@ -36,7 +36,7 @@ def _check_valid_input(skus):
     if not isinstance(skus, str):
         return False
 
-    skus = skus.split(',')
+    skus = list(skus)
     if not skus:
         return False
     
@@ -71,6 +71,7 @@ offers = {
         "price": 45
     }
 }
+
 
 
 

@@ -10,10 +10,11 @@ class TestCheckout():
         assert checkout_solution.checkout('a') == 50
 
     def test_checkout_returns_total_with_offer_applied(self):
-        assert checkout_solution.checkout('a,a,a') == 130
+        assert checkout_solution.checkout('aaa') == 130
 
     def test_checkout_returns_total_with_mixed_offers_and_single(self):
         assert checkout_solution.checkout('a,b,a,a') == 160        
+
 
 
 
