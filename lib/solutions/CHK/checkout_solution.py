@@ -15,8 +15,9 @@ def checkout(skus):
     return totalprice
 
 
-def check_offers(skus, totalprice):
-
+def _check_offers(skus, totalprice):
+    unique_items = list(set(skus))
+    
 
 
 items = {
