@@ -8,5 +8,3 @@ class TestCheckout():
 
     def test_checkout_returns_total_value_for_single_item(self):
         assert checkout_solution.checkout('A') == 50
-
-
