@@ -1,5 +1,4 @@
 
-
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
@@ -10,7 +9,6 @@ def checkout(skus):
     if not skus:
         totalprice
 
-    skus = skus.lower()
     selectedItems = list(skus)
 
 
@@ -37,7 +35,7 @@ def _check_valid_input(skus):
     if not isinstance(skus, str):
         return False
 
-    skus = list(skus.lower())
+    skus = list(skus)
 
     for item in skus:
         if item not in items:
@@ -46,28 +44,27 @@ def _check_valid_input(skus):
 
 
 items = {
-        "a":{
+        "A":{
             "price": 50,
         },
-        "b":{
+        "B":{
             "price": 30,
         },     
-        "c":{
+        "C":{
             "price": 20
         },
-        "d":{
+        "D":{
             "price": 15
         },                
 }
 
 offers = {
-    'a': {
+    'A': {
         "quantity": 3,
         "price": 130
     },
-    "b": {
+    "B": {
         "quantity": 2,
         "price": 45
     }
 }
-
