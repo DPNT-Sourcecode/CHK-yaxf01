@@ -12,7 +12,7 @@ def checkout(skus):
     for selected_item in selectedItems:
         totalprice = totalprice + items[selected_item]['price']
 
-    totalprice = _check_offers(skus, totalprice)
+    totalprice = _check_offers(selectedItems, totalprice)
     return totalprice
 
 
@@ -21,8 +21,7 @@ def _check_offers(skus, totalprice):
     for uitem in unique_items:
         if (uitem in offers):
             offer_threshold = offers[uitem]['quantity']
-            offer_count =   offer_threshold % skus.count(uitem)
-            return(offer_threshold)
+            offer_count =    skus.count(uitem) % offer_threshold
             if offer_count > 0:
                 for i in range(offer_count):
                     original_cost = items[uitem]['price'] * offer_threshold
@@ -56,6 +55,7 @@ offers = {
         "price": 45
     }
 }
+
 
 
 
