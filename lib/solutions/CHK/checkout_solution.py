@@ -56,7 +56,7 @@ items = {
             "price": 20
         },
         "d":{
-            "price": 20
+            "price": 15
         },                
 }
 

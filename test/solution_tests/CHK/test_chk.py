@@ -8,9 +8,14 @@ class TestCheckout():
 
     def test_checkout_returns_0_for_empty_cart(self):
         assert checkout_solution.checkout("") == 0
-        
+
     def test_checkout_returns_total_value_for_single_item(self):
-        assert checkout_solution.checkout('A') == 50
+        assert checkout_solution.checkout('a') == 50
+    
+    def test_checkout_can_handle_caps_and_lower(self):
+        inputs = ['a', 'A', 'AB', 'aB', 'Ab']
+        for input in inputs:
+            assert checkout_solution.checkout(input) != -1
 
     def test_checkout_returns_total_with_offer_applied(self):
         assert checkout_solution.checkout('aaa') == 130
@@ -18,3 +23,5 @@ class TestCheckout():
     def test_checkout_returns_total_with_mixed_offers_and_single(self):
         assert checkout_solution.checkout('abaa') == 160        
 
+    def test_checkout_returns_total_with_mixed_input(self):
+        assert checkout_solution.checkout('ABCa') == 130
