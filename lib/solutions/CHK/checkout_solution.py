@@ -17,7 +17,10 @@ def checkout(skus):
 
 def _check_offers(skus, totalprice):
     unique_items = list(set(skus))
-    
+    for uitem in unique_items:
+        if (uitem in offers):
+            offer_threshold = offers[uitem]['quantity']
+            offer_count =  skus.count(uitem) % offer_threshold
 
 
 items = {
@@ -45,3 +48,4 @@ offers = {
         "price": 45
     }
 }
+
