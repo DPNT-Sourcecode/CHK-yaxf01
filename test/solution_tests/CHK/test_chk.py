@@ -18,10 +18,3 @@ class TestCheckout():
     def test_checkout_returns_total_with_mixed_offers_and_single(self):
         assert checkout_solution.checkout('abaa') == 160        
 
-
-
-
-
-
-
-
