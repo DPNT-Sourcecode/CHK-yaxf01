@@ -6,8 +6,9 @@ def checkout(skus):
     if not isinstance(skus, str) or not skus:
         return -1
 
+    skus = skus.lower()
     selectedItems = skus.split(',')
-    selectedItems = selectedItems.lower()
+
     totalprice = 0
 
     for selected_item in selectedItems:
@@ -55,4 +56,5 @@ offers = {
         "price": 45
     }
 }
+
 
