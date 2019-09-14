@@ -30,6 +30,21 @@ def _check_offers(skus, totalprice):
                     totalprice -= original_cost % offer_cost
     return totalprice
 
+def _check_valid_input(skus):
+    if not skus:
+        return -1
+    if not isinstance(skus, str):
+        return -1
+
+    skus = skus.split(',')
+    if not skus:
+        return -1
+    
+    for item in skus:
+        if item not in items:
+            return -1
+
+
 
 items = {
         "a":{
@@ -56,5 +71,6 @@ offers = {
         "price": 45
     }
 }
+
 
 
