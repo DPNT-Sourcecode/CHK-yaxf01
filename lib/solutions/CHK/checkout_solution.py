@@ -25,7 +25,7 @@ def _check_offers(skus, totalprice):
     for uitem in unique_items:
         if (uitem in offers):
             offer_threshold = offers[uitem]['quantity']
-            offer_count = int(round(skus.count(uitem) / offer_threshold))
+            offer_count = int(skus.count(uitem) / offer_threshold)
             if offer_count > 0:
                 for i in range(offer_count):
                     original_cost = items[uitem]['price'] * offer_threshold
@@ -70,3 +70,4 @@ offers = {
         "price": 45
     }
 }
+
