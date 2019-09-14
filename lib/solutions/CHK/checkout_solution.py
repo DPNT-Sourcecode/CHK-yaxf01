@@ -6,6 +6,14 @@ def checkout(skus):
     if not isinstance(skus, str):
         return -1
 
+    selectedItems = skus.split(',')
+    selectedItems = sorted(selectedItems)
+    totalprice = 0
+    for selected_item in selectedItems:
+
+
+
+
 def items = {
         "A":{
             "price": 50,
@@ -28,4 +36,5 @@ def items = {
             "price": 20
         },                
 }
+
 
