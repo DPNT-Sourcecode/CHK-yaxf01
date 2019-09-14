@@ -9,9 +9,8 @@ def checkout(skus):
     selectedItems = skus.split(',')
     selectedItems = sorted(selectedItems)
     totalprice = 0
-    for selected_item in selectedItems:
 
-
+    return totalprice
 
 
 def items = {
@@ -36,5 +35,6 @@ def items = {
             "price": 20
         },                
 }
+
 
 
