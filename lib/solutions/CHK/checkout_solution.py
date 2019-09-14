@@ -3,7 +3,7 @@
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
-    if not isinstance(skus, str) or not skus:
+    if _check_valid_input(skus) == False:
         return -1
 
     skus = skus.lower()
@@ -32,17 +32,17 @@ def _check_offers(skus, totalprice):
 
 def _check_valid_input(skus):
     if not skus:
-        return -1
+        return False
     if not isinstance(skus, str):
-        return -1
+        return False
 
     skus = skus.split(',')
     if not skus:
-        return -1
+        return False
     
     for item in skus:
         if item not in items:
-            return -1
+            return False
 
 
 
@@ -71,6 +71,7 @@ offers = {
         "price": 45
     }
 }
+
 
 
 
