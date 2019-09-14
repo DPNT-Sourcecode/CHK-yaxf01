@@ -5,7 +5,7 @@
 def checkout(skus):
     if _check_valid_input(skus) == False:
         return -1
-    
+
     totalprice = 0  
     if not skus:
         totalprice

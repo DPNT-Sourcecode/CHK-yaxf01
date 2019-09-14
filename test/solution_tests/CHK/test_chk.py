@@ -13,7 +13,7 @@ class TestCheckout():
         assert checkout_solution.checkout('a') == 50
     
     def test_checkout_can_handle_caps_and_lower(self):
-        inputs = ['a', 'A', 'AB', 'aB', 'Ab']
+        inputs = ["a", 'A', 'AB', 'aB', 'Ab']
         for input in inputs:
             assert checkout_solution.checkout(input) != -1
 
@@ -25,3 +25,6 @@ class TestCheckout():
 
     def test_checkout_returns_total_with_mixed_input(self):
         assert checkout_solution.checkout('ABCa') == 130
+
+    def test_checkout(self):
+        assert checkout_solution.checkout("AA") == 100
