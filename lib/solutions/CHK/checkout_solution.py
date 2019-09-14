@@ -23,7 +23,7 @@ def _check_offers(skus, totalprice):
             offer_threshold = offers[uitem]['quantity']
             print(offer_threshold)
             print(skus.count(uitem))
-            offer_count = skus.count(uitem) % offer_threshold
+            offer_count = offer_threshold / skus.count(uitem)
             print(offer_count)
             if offer_count > 0:
                 for i in range(offer_count):
@@ -58,6 +58,7 @@ offers = {
         "price": 45
     }
 }
+
 
 
 
