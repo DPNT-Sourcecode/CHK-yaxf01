@@ -5,11 +5,14 @@
 def checkout(skus):
     if _check_valid_input(skus) == False:
         return -1
+    
+    totalprice = 0  
+    if not skus:
+        totalprice
 
     skus = skus.lower()
     selectedItems = list(skus)
 
-    totalprice = 0
 
     for selected_item in selectedItems:
         totalprice = totalprice + items[selected_item]['price']
@@ -31,15 +34,11 @@ def _check_offers(skus, totalprice):
     return totalprice
 
 def _check_valid_input(skus):
-    if not skus:
-        return False
     if not isinstance(skus, str):
         return False
 
-    skus = list(skus)
-    if not skus:
-        return False
-    
+    skus = list(skus.lower())
+
     for item in skus:
         if item not in items:
             return False
@@ -71,6 +70,7 @@ offers = {
         "price": 45
     }
 }
+
 
 
 
