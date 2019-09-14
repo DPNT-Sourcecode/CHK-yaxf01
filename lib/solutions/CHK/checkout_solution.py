@@ -16,6 +16,11 @@ def checkout(skus):
     return totalprice
 
 
+def check_offers(sorted_skus):
+    no_offers = false
+    while
+
+
 items = {
         "A":{
             "price": 50,
