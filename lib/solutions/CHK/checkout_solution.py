@@ -7,6 +7,7 @@ def checkout(skus):
         return -1
 
     selectedItems = skus.split(',')
+    selectedItems = selectedItems.lower()
     totalprice = 0
 
     for selected_item in selectedItems:
@@ -30,27 +31,28 @@ def _check_offers(skus, totalprice):
 
 
 items = {
-        "A":{
+        "a":{
             "price": 50,
         },
-        "B":{
+        "b":{
             "price": 30,
         },     
-        "C":{
+        "c":{
             "price": 20
         },
-        "D":{
+        "d":{
             "price": 20
         },                
 }
 
 offers = {
-    'A': {
+    'a': {
         "quantity": 3,
         "price": 130
     },
-    "B": {
+    "b": {
         "quantity": 2,
         "price": 45
     }
 }
+

@@ -7,13 +7,14 @@ class TestCheckout():
             assert checkout_solution.checkout(input) == -1
 
     def test_checkout_returns_total_value_for_single_item(self):
-        assert checkout_solution.checkout('A') == 50
+        assert checkout_solution.checkout('a') == 50
 
     def test_checkout_returns_total_with_offer_applied(self):
-        assert checkout_solution.checkout('A,A,A') == 130
+        assert checkout_solution.checkout('a,a,a') == 130
 
     def test_checkout_returns_total_with_mixed_offers_and_single(self):
-        assert checkout_solution.checkout('A,B,A,A') == 160        
+        assert checkout_solution.checkout('a,b,a,a') == 160        
+
 
 
 
