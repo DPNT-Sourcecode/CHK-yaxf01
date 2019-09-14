@@ -10,10 +10,13 @@ def checkout(skus):
     selectedItems = sorted(selectedItems)
     totalprice = 0
 
+    for selected_item in selectedItems:
+        totalprice = totalprice + items.get(selected_item)['price']
+
     return totalprice
 
 
-def items = {
+items = {
         "A":{
             "price": 50,
             "offer" : {
@@ -35,6 +38,7 @@ def items = {
             "price": 20
         },                
 }
+
 
 
 
