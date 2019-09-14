@@ -17,8 +17,10 @@ def checkout(skus):
 
 
 def check_offers(sorted_skus):
-    no_offers = false
-    while
+    no_offers = False
+    price = 0
+    while no_offers == False:
+        if sorted_skus.count('A') >= items.get('A')["offer"]["threshold"]
 
 
 items = {
@@ -43,3 +45,4 @@ items = {
             "price": 20
         },                
 }
+
