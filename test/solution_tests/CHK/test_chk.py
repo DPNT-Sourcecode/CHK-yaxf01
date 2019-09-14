@@ -24,7 +24,7 @@ class TestCheckout():
         assert checkout_solution.checkout('abaa') == 160        
 
     def test_checkout_returns_total_with_mixed_input(self):
-        assert checkout_solution.checkout('ABCa') == 130
+        assert checkout_solution.checkout('ABCa') == 150
 
     def test_checkout(self):
         assert checkout_solution.checkout("AA") == 100
