@@ -3,7 +3,7 @@
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
-    if not isinstance(skus, str):
+    if not isinstance(skus, str) or not skus:
         return -1
 
     selectedItems = skus.split(',')

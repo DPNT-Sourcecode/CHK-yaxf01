@@ -2,7 +2,7 @@ from lib.solutions.CHK import checkout_solution
 
 class TestCheckout():
     def test_checkout_returns_error_when_invalid_input(self):
-        invalid_inputs = [1, -5, [1,2]]
+        invalid_inputs = [1, -5, [1,2], '']
         for input in invalid_inputs:
             assert checkout_solution.checkout(input) == -1
 
@@ -14,5 +14,6 @@ class TestCheckout():
 
     def test_checkout_returns_total_with_mixed_offers_and_single(self):
         assert checkout_solution.checkout('A,B,A,A') == 160        
+
 
 
