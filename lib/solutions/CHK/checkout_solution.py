@@ -7,28 +7,33 @@ def checkout(skus):
 
     totalprice = 0  
     if not skus:
-        totalprice
+        return totalprice
 
     selectedItems = list(skus)
-
-
     for selected_item in selectedItems:
         totalprice = totalprice + items[selected_item]['price']
 
-    totalprice = _check_offers(selectedItems, totalprice)
+
+    unique_items = list(set(skus))
+    eligible_items = selected_items
+    for uitem in unique_items:
+        
+
+
+
     return totalprice
 
-def _check_offers(skus, totalprice):
-    unique_items = list(set(skus))
-    for uitem in unique_items:
-        if (uitem in offers):
-            offer_threshold = offers[uitem]['quantity']
-            offer_count = int(skus.count(uitem) / offer_threshold)
-            if offer_count > 0:
-                for i in range(offer_count):
-                    original_cost = items[uitem]['price'] * offer_threshold
-                    offer_cost = offers[uitem]['price']
-                    totalprice -= original_cost % offer_cost
+# def _check_offers(skus, totalprice):
+#     unique_items = list(set(skus))
+#     for uitem in unique_items:
+#         if (uitem in offers):
+#             offer_threshold = offers[uitem]['quantity']
+#             offer_count = int(skus.count(uitem) / offer_threshold)
+#             if offer_count > 0:
+#                 for i in range(offer_count):
+#                     original_cost = items[uitem]['price'] * offer_threshold
+#                     offer_cost = offers[uitem]['price']
+#                     totalprice -= original_cost % offer_cost
     return totalprice
 
 def _check_valid_input(skus):
