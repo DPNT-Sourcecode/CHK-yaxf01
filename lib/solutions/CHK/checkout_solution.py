@@ -13,7 +13,6 @@ def checkout(skus):
     for selected_item in selectedItems:
         totalprice = totalprice + items[selected_item]['price']
 
-
     unique_items = list(set(skus))
     eligible_items = selected_items
     for uitem in unique_items:
@@ -43,6 +42,12 @@ def _is_offer_eligible(offer, eligible_items, item_id):
     if offer['required_item'] in eligible_items and eligible_items.count(item_id) >= offer['quantity']:
         return true
     return false
+
+def _get_eligible_offers(available_offers, item_id, eligible_items):
+    eligible_items = dict()
+    for k, v in available_offers.items():
+        if v['required_item'] in eligible_items and eligible_items.count(item_id) >= v['quantity']:
+            eligible_items[k] = v
 
 def _check_valid_input(skus):
     if not isinstance(skus, str):
@@ -106,6 +111,7 @@ offers = {
         'saving': 40
     }
 }
+
 
 
 
