@@ -60,10 +60,10 @@ def _is_offer_eligible(offer, eligible_items, item_id):
 
 def _get_eligible_offers(available_offers, eligible_items, item_id):
     eligible_offers = dict()
-    print(available_offers)
     for k, v in available_offers.items():
         if v['required_item'] in eligible_items and eligible_items.count(item_id) >= v['quantity']:
-            eligible_items[k] = v
+            eligible_offers[k] = v
+
     return eligible_offers
 
 def _check_valid_input(skus):
