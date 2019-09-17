@@ -44,27 +44,46 @@ def _check_valid_input(skus):
 
 
 items = {
-        "A":{
-            "price": 50,
+        'A':{
+            'price': 50,
         },
-        "B":{
-            "price": 30,
+        'B':{
+            'price': 30,
         },     
-        "C":{
-            "price": 20
+        'C':{
+            'price': 20
         },
-        "D":{
-            "price": 15
-        },                
+        'D':{
+            'price': 15
+        },
+        'E': {
+            'price': 40
+        }             
 }
 
 offers = {
-    'A': {
-        "quantity": 3,
-        "price": 130
+    0: {
+        'target_item': 'A',
+        'required_item': 'A',
+        'quantity': 3,
+        'saving': 20
     },
-    "B": {
-        "quantity": 2,
-        "price": 45
+    1: {
+        'target_item': 'A',
+        'required_item': 'A',
+        'quantity': 2,
+        'saving': 50
+    },
+    2: {
+        'target_item': 'B',
+        'required_item': 'B',
+        'quantity': 2,
+        'saving': 15
+    },
+    3: {
+        'target_item': 'B',
+        'required_item': 'E',
+        'quantity': 2,
+        'saving': 40
     }
 }
