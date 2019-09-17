@@ -28,3 +28,6 @@ class TestCheckout():
 
     def test_checkout(self):
         assert checkout_solution.checkout("AA") == 100
+
+    def test_checkout_with_multi_offers(self):
+        assert checkout_solution.checkout('AAAAABBE') == 310
