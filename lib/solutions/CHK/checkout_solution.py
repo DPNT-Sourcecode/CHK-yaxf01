@@ -30,10 +30,7 @@ def checkout(skus):
                     for i in range(saving['quantity']):
                         print('removing' + uitem)
                         print(eligible_items)
-                        try:
-                            eligible_items.remove(saving(uitem))
-                        except:
-                            pass
+                        eligible_items.remove(saving(saving['target_item']))
                 else:
                     has_offers = False
 
@@ -136,3 +133,4 @@ offers = {
         'saving': 30
     }
 }
+
