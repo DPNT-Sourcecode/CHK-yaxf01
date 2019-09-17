@@ -36,6 +36,11 @@ def checkout(skus):
 #                     totalprice -= original_cost % offer_cost
 
 
+def _is_offer_eligible(offer, eligible_items, item_id):
+    if offer['required_item'] in eligible_items and eligible_items.count(item_id) >= offer['quantity']:
+        return true
+    return false
+
 def _check_valid_input(skus):
     if not isinstance(skus, str):
         return False
@@ -98,4 +103,5 @@ offers = {
         'saving': 40
     }
 }
+
 
