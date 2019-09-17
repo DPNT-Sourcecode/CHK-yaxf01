@@ -26,6 +26,7 @@ def checkout(skus):
                     saving = _get_highest_saving(eligible_offers)
                     totalprice -= saving['saving']
                     for i in range(saving['quantity']):
+                        print(eligible_items)
                         eligible_items.remove(uitem)
                 else:
                     has_offers = False
@@ -62,8 +63,7 @@ def _is_offer_eligible(offer, eligible_items, item_id):
 def _get_eligible_offers(available_offers, eligible_items, item_id):
     eligible_offers = dict()
     for k, v in available_offers.items():
-        print(v['required_item'] in eligible_items and eligible_items.count(item_id) >= v['quantity'])
-        if v['required_item'] in eligible_items and eligible_items.count(item_id) >= v['quantity']:
+        if v['required_item'] in eligible_items and eligible_items.count(v['required_item']) >= v['quantity']:
             eligible_offers[k] = v
 
     return eligible_offers
@@ -130,4 +130,5 @@ offers = {
         'saving': 30
     }
 }
+
 
