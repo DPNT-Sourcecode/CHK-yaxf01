@@ -28,8 +28,12 @@ def checkout(skus):
                     print(saving)
                     totalprice -= saving['saving']
                     for i in range(saving['quantity']):
-                        eligible_items.remove(saving['required_item'])
-                        print('removing' + saving['required_item'])
+                        print('removing' + uitem)
+                        print(eligible_items)
+                        try:
+                            eligible_items.remove(saving(uitem))
+                        except:
+                            pass
                 else:
                     has_offers = False
 
