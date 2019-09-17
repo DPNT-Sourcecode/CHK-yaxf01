@@ -17,10 +17,12 @@ def checkout(skus):
     eligible_items = selected_items
     for uitem in unique_items:
         available_offers = _get_available_offers(uitem)
-        eligible_offers = dict()
-        for k, v in available_offers.items():
-            if _is_offer_eligible(v, eligible_items, uitem):
-                eligible_offers[k] = v
+        if available_offers:
+            has_offers = True
+            while has_offers:
+                eligible_offers = _get_eligible_offers(available_offers, eligible_items, uitem)
+                if eligible_offers:
+
 
 
     return totalprice
@@ -38,16 +40,26 @@ def checkout(skus):
 #                     totalprice -= original_cost % offer_cost
 
 
+def _get_highest_saving(eligible_offers):
+    saving = 0
+    highest_offer = None;
+    for k, v in eligible_offers.items():
+        if v['saving'] > saving:
+            highest_offer = v
+
+    return highest_offer
+
 def _is_offer_eligible(offer, eligible_items, item_id):
     if offer['required_item'] in eligible_items and eligible_items.count(item_id) >= offer['quantity']:
         return true
     return false
 
 def _get_eligible_offers(available_offers, item_id, eligible_items):
-    eligible_items = dict()
+    eligible_offers = dict()
     for k, v in available_offers.items():
         if v['required_item'] in eligible_items and eligible_items.count(item_id) >= v['quantity']:
             eligible_items[k] = v
+    return eligible_offers
 
 def _check_valid_input(skus):
     if not isinstance(skus, str):
@@ -111,6 +123,7 @@ offers = {
         'saving': 40
     }
 }
+
 
 
 
