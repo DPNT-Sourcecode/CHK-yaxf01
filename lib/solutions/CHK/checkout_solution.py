@@ -10,7 +10,7 @@ def checkout(skus):
         return totalprice
 
     selected_items = list(skus)
-    for selected_item in selectedItems:
+    for selected_item in selected_items:
         totalprice = totalprice + items[selected_item]['price']
 
     unique_items = list(set(skus))
@@ -22,8 +22,12 @@ def checkout(skus):
             while has_offers:
                 eligible_offers = _get_eligible_offers(available_offers, eligible_items, uitem)
                 if eligible_offers:
-
-
+                    saving = _get_highest_saving(eligible_offers)
+                    totalprice -= saving['saving']
+                    for i in range(saving['quantity']):
+                        eligible_items.remove(uitem)
+                else:
+                    has_offers = False
 
     return totalprice
 
@@ -73,8 +77,8 @@ def _check_valid_input(skus):
 
 def _get_available_offers(item_id):
     available_offers = dict()
-    for k, v in offers:
-        if v['target'] == item_id:
+    for k, v in offers.items():
+        if v['target_item'] == item_id:
             available_offers[k] = v
         
     return available_offers
@@ -123,8 +127,3 @@ offers = {
         'saving': 40
     }
 }
-
-
-
-
-
