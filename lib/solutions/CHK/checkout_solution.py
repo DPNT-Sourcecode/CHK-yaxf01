@@ -18,7 +18,10 @@ def checkout(skus):
     eligible_items = selected_items
     for uitem in unique_items:
         available_offers = _get_available_offers(uitem)
-
+        eligible_offers = dict()
+        for k, v in available_offers.items():
+            if _is_offer_eligible(v, eligible_items, uitem):
+                eligible_offers[k] = v
 
 
     return totalprice
@@ -103,5 +106,6 @@ offers = {
         'saving': 40
     }
 }
+
 
 
