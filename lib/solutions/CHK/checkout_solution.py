@@ -16,20 +16,20 @@ def checkout(skus):
     unique_items = list(set(skus))
     eligible_items = selected_items
     for uitem in unique_items:
-        print(uitem)
         available_offers = _get_available_offers(uitem)
-        print(available_offers)
         if available_offers:
             has_offers = True
             while has_offers:
                 eligible_offers = _get_eligible_offers(available_offers, eligible_items, uitem)
                 if eligible_offers:
+                    print(uitem)
+                    print(eligible_offers)
                     saving = _get_highest_saving(eligible_offers)
-                    print(saving['saving'])
+                    print(saving)
                     totalprice -= saving['saving']
-                    print(eligible_items)
                     for i in range(saving['quantity']):
                         eligible_items.remove(saving['required_item'])
+                        print('removing' + saving['required_item'])
                 else:
                     has_offers = False
 
@@ -132,7 +132,3 @@ offers = {
         'saving': 30
     }
 }
-
-
-
-
