@@ -58,10 +58,10 @@ def _is_offer_eligible(offer, eligible_items, item_id):
         return true
     return false
 
-def _get_eligible_offers(available_offers, item_id, eligible_items):
+def _get_eligible_offers(available_offers, eligible_items, item_id):
     eligible_offers = dict()
+    print(available_offers)
     for k, v in available_offers.items():
-        print(v)
         if v['required_item'] in eligible_items and eligible_items.count(item_id) >= v['quantity']:
             eligible_items[k] = v
     return eligible_offers
@@ -112,7 +112,7 @@ offers = {
     1: {
         'target_item': 'A',
         'required_item': 'A',
-        'quantity': 2,
+        'quantity': 5,
         'saving': 50
     },
     2: {
@@ -128,3 +128,4 @@ offers = {
         'saving': 40
     }
 }
+
