@@ -9,7 +9,7 @@ def checkout(skus):
     if not skus:
         return totalprice
 
-    selectedItems = list(skus)
+    selected_items = list(skus)
     for selected_item in selectedItems:
         totalprice = totalprice + items[selected_item]['price']
 
@@ -17,7 +17,7 @@ def checkout(skus):
     unique_items = list(set(skus))
     eligible_items = selected_items
     for uitem in unique_items:
-        
+        available_offers = _get_available_offers(uitem)
 
 
 
@@ -34,7 +34,7 @@ def checkout(skus):
 #                     original_cost = items[uitem]['price'] * offer_threshold
 #                     offer_cost = offers[uitem]['price']
 #                     totalprice -= original_cost % offer_cost
-    return totalprice
+
 
 def _check_valid_input(skus):
     if not isinstance(skus, str):
@@ -46,7 +46,13 @@ def _check_valid_input(skus):
         if item not in items:
             return False
 
-
+def _get_available_offers(item_id):
+    available_offers = dict()
+    for k, v in offers:
+        if v['target'] == item_id:
+            available_offers[k] = v
+        
+    return available_offers
 
 items = {
         'A':{
@@ -92,3 +98,4 @@ offers = {
         'saving': 40
     }
 }
+
