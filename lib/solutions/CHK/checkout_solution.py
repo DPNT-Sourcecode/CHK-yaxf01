@@ -22,12 +22,12 @@ def checkout(skus):
             has_offers = True
             while has_offers:
                 eligible_offers = _get_eligible_offers(available_offers, eligible_items, uitem)
+                print(eligible_offers)
                 if eligible_offers:
                     saving = _get_highest_saving(eligible_offers)
                     totalprice -= saving['saving']
                     for i in range(saving['quantity']):
-                        print(eligible_items)
-                        eligible_items.remove(uitem)
+                        eligible_items.remove(saving['required_item'])
                 else:
                     has_offers = False
 
@@ -130,5 +130,6 @@ offers = {
         'saving': 30
     }
 }
+
 
 
