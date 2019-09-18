@@ -22,32 +22,16 @@ def checkout(skus):
             while has_offers:
                 eligible_offers = _get_eligible_offers(available_offers, eligible_items, uitem)
                 if eligible_offers:
-                    print(uitem)
-                    print(eligible_offers)
                     saving = _get_highest_saving(eligible_offers)
-                    print(saving)
                     totalprice -= saving['saving']
                     for i in range(saving['required']['quantity']):
-                        print('removing' + uitem)
-                        print(eligible_items)
-                        eligible_items.remove(uitem)
+                        eligible_items.remove(saving['required']['item'])
+                    if saving['required']['item'] != saving['target']['item']:
+                        eligible_items.remove(saving['target']['item'])
                 else:
                     has_offers = False
 
     return totalprice
-
-# def _check_offers(skus, totalprice):
-#     unique_items = list(set(skus))
-#     for uitem in unique_items:
-#         if (uitem in offers):
-#             offer_threshold = offers[uitem]['quantity']
-#             offer_count = int(skus.count(uitem) / offer_threshold)
-#             if offer_count > 0:
-#                 for i in range(offer_count):
-#                     original_cost = items[uitem]['price'] * offer_threshold
-#                     offer_cost = offers[uitem]['price']
-#                     totalprice -= original_cost % offer_cost
-
 
 def _get_highest_saving(eligible_offers):
     saving = 0
@@ -103,6 +87,7 @@ items = {
 }
 
 # This is horrible, should really be in a database or something
+# Would be a good in a relationaldb 
 offers = {
     0: {
         'target': {

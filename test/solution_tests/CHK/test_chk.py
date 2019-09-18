@@ -37,3 +37,8 @@ class TestCheckout():
 
     def test_CHK_R2_024(self):
         assert checkout_solution.checkout('EEB') == 80
+
+    def test(self):
+        test_cases = dict(('A', 50))
+        for k, v in test_cases:
+            assert checkout_solution.checkout(k) == v
