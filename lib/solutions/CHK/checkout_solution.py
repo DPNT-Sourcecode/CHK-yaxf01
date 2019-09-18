@@ -142,6 +142,11 @@ offers = {
         'target': {
             'item': 'F',
             'quantity': 3
-        }
+        },
+        'required': {
+            'item': 'F',
+            'quantity': 3
+        },
+        'saving': 10
     }
 }
