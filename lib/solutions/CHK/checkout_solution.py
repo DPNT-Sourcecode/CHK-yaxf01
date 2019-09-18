@@ -1,5 +1,5 @@
-from solutions.CHK.offer_data import offers_data
-from solutions.CHK.data.items import items_data
+from lib.solutions.CHK.offer_data import offers_data
+from lib.solutions.CHK.data.items import items_data
 import sys
 
 # noinspection PyUnusedLocal

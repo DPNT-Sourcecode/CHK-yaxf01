@@ -39,11 +39,12 @@ class TestCheckout():
             'RRR': 150,
             'RRRQ': 150,
             'QQQRRRQ': 230,
-            'UUU': 80,
-            'UUAU': 130,
+            'UUU': 120,
+            'UUAU': 170,
             'VV': 90,
             'VVV': 130,
-            'VVVVV': 220
+            'VVVVV': 220,
+            'UUUU': 80
         }
         for k, v in test_cases.items():
             assert checkout_solution.checkout(k) == v
