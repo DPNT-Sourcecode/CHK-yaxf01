@@ -11,6 +11,7 @@ from runner.utils import Utils
 from runner.user_input_action import get_user_input
 
 
+print(sys.path)
 """
   ~~~~~~~~~~ Running the system: ~~~~~~~~~~~~~
  

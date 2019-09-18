@@ -1,4 +1,4 @@
-from lib.solutions.CHK.data.offers import offers_data
+from offer_data import offers_data
 from lib.solutions.CHK.data.items import items_data
 import sys
 
