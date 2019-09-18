@@ -27,10 +27,10 @@ def checkout(skus):
                     saving = _get_highest_saving(eligible_offers)
                     print(saving)
                     totalprice -= saving['saving']
-                    for i in range(saving['quantity']):
+                    for i in range(saving['required']['quantity']):
                         print('removing' + uitem)
                         print(eligible_items)
-                        eligible_items.remove(saving(saving['target_item']))
+                        eligible_items.remove(uitem)
                 else:
                     has_offers = False
 
@@ -58,15 +58,10 @@ def _get_highest_saving(eligible_offers):
 
     return highest_offer
 
-def _is_offer_eligible(offer, eligible_items, item_id):
-    if offer['required_item'] in eligible_items and eligible_items.count(item_id) >= offer['quantity']:
-        return true
-    return false
-
 def _get_eligible_offers(available_offers, eligible_items, item_id):
     eligible_offers = dict()
     for k, v in available_offers.items():
-        if v['required_item'] in eligible_items and eligible_items.count(v['required_item']) >= v['quantity']:
+        if v['required']['item'] in eligible_items and eligible_items.count(v['required']['item']) >= v['required']['quantity']:
             eligible_offers[k] = v
 
     return eligible_offers
@@ -84,7 +79,7 @@ def _check_valid_input(skus):
 def _get_available_offers(item_id):
     available_offers = dict()
     for k, v in offers.items():
-        if v['target_item'] == item_id:
+        if v['target']['item'] == item_id:
             available_offers[k] = v
         
     return available_offers
@@ -107,29 +102,50 @@ items = {
         }             
 }
 
+# This is horrible, should really be in a database or something
 offers = {
     0: {
-        'target_item': 'A',
-        'required_item': 'A',
-        'quantity': 3,
+        'target': {
+            'item': 'A',
+            'quantity': 3
+        },
+        'required': {
+            'item': 'A',
+            'quantity': 3
+        },
         'saving': 20
     },
     1: {
-        'target_item': 'A',
-        'required_item': 'A',
-        'quantity': 5,
+        'target': {
+            'item': 'A',
+            'quantity': 5
+        },
+        'required': {
+            'item': 'A',
+            'quantity': 5
+        },
         'saving': 50
     },
     2: {
-        'target_item': 'B',
-        'required_item': 'B',
-        'quantity': 2,
+        'target': {
+            'item': 'B',
+            'quantity': 2
+        },
+        'required': {
+            'item': 'B',
+            'quantity': 2
+        },
         'saving': 15
     },
     3: {
-        'target_item': 'B',
-        'required_item': 'E',
-        'quantity': 2,
+        'target': {
+            'item': 'B',
+            'quantity': 1
+        },
+        'required': {
+            'item': 'E',
+            'quantity': 2
+        },
         'saving': 30
     }
 }
