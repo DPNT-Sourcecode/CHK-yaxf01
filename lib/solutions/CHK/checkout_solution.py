@@ -72,5 +72,3 @@ def _get_available_offers(item_id):
             available_offers[k] = v
         
     return available_offers
-
-
