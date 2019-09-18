@@ -26,7 +26,6 @@ def checkout(skus):
             has_offers = True
             while has_offers:
                 eligible_offers = _get_eligible_offers(available_offers, eligible_items, uitem)
-                print(totalprice)
                 if eligible_offers:
                     saving = _get_highest_saving(eligible_offers)
                     totalprice -= saving['saving']
@@ -73,4 +72,5 @@ def _get_available_offers(item_id):
             available_offers[k] = v
         
     return available_offers
+
 
