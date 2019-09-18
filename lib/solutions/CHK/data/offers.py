@@ -55,5 +55,3 @@ offers_data = {
         'saving': 10
     }
 }
-
-return offers_data

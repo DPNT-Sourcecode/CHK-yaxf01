@@ -1,4 +1,4 @@
-# from data.offers import offers_data
+from lib.solutions.CHK.data.offers import offers_data
 import sys
 
 # noinspection PyUnusedLocal
