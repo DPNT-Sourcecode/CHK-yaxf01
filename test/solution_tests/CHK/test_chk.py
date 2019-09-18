@@ -39,6 +39,11 @@ class TestCheckout():
         assert checkout_solution.checkout('EEB') == 80
 
     def test(self):
-        test_cases = dict(('A', 50))
-        for k, v in test_cases:
+        test_cases = {
+            'A': 50,
+            'AA': 100,
+            'AAA' : 130,
+            'AAAAA': 150
+        }
+        for k, v in test_cases.items():
             assert checkout_solution.checkout(k) == v
