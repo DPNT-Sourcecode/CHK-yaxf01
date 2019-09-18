@@ -1,82 +1,83 @@
 items_data = {
 	'A' : {
-		'price': 
-	}
+		'price': 50
+	},
 	'B' : {
-		'price': 
-	}
+		'price': 30
+	},
 	'C' : {
-		'price': 
-	}
+		'price': 20
+	},
 	'D' : {
-		'price': 
-	}
+		'price': 15
+	},
 	'E' : {
-		'price': 
-	}
+		'price': 40
+	},
 	'F' : {
-		'price': 
-	}
+		'price': 10
+	},
 	'G' : {
-		'price': 
-	}
+		'price': 20
+	},
 	'H' : {
-		'price': 
-	}
+		'price': 10
+	},
 	'I' : {
-		'price': 
-	}
+		'price': 35
+	},
 	'J' : {
-		'price': 
-	}
+		'price': 60
+	},
 	'K' : {
-		'price': 
-	}
+		'price': 80
+	},
 	'L' : {
-		'price': 
-	}
+		'price': 90
+	},
 	'M' : {
-		'price': 
-	}
+		'price': 15
+	},
 	'N' : {
-		'price': 
-	}
+		'price': 40
+	},
 	'O' : {
-		'price': 
-	}
+		'price': 10
+	},
 	'P' : {
-		'price': 
-	}
+		'price': 50
+	},
 	'Q' : {
-		'price': 
-	}
+		'price': 30
+	},
 	'R' : {
-		'price': 
-	}
+		'price': 50
+	},
 	'S' : {
-		'price': 
-	}
+		'price': 30
+	},
 	'T' : {
-		'price': 
-	}
+		'price': 20
+	},
 	'U' : {
-		'price': 
-	}
+		'price': 40
+	},
 	'V' : {
-		'price': 
-	}
+		'price': 50
+	},
 	'W' : {
-		'price': 
-	}
+		'price': 20
+	},
 	'X' : {
-		'price': 
-	}
+		'price': 90
+	},
 	'Y' : {
-		'price': 
-	}
+		'price': 10
+	},
 	'Z' : {
-		'price': 
+		'price': 50
 	}
 }
+
 
 
