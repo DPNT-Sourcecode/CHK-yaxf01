@@ -131,7 +131,7 @@ offers_data = {
         },
         'saving': 10
     },
-    11: {
+    12: {
         'target': {
             'item': 'V',
             'quantity': 3
@@ -142,7 +142,7 @@ offers_data = {
         },
         'saving': 20
     },
-    12: {
+    13: {
         'target': {
             'item': 'H',
             'quantity': 5
@@ -153,7 +153,7 @@ offers_data = {
         },
         'saving': 5
     },
-    13: {
+    14: {
         'target': {
             'item': 'H',
             'quantity': 10
