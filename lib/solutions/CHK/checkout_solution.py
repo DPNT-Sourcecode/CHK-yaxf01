@@ -85,7 +85,10 @@ items = {
         },
         'E': {
             'price': 40
-        }             
+        },
+        'F' : {
+            'price': 10
+        }          
 }
 
 # This is horrible, should really be in a database or something
@@ -134,5 +137,11 @@ offers = {
             'quantity': 2
         },
         'saving': 30
+    },
+    4: {
+        'target': {
+            'item': 'F',
+            'quantity': 3
+        }
     }
 }

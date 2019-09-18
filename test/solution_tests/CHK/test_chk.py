@@ -22,7 +22,10 @@ class TestCheckout():
             'ABAA' : 160,
             'AAAAABBEE': 310,
             'AAAAAAAA': 330,
-            'EEB': 80
+            'EEB': 80,
+            'ABCDECBAABCABBAAAEEAA': 665,
+            'FFF': 20,
+            'FF': 20
         }
         for k, v in test_cases.items():
             assert checkout_solution.checkout(k) == v
