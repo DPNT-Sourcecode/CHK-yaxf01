@@ -89,9 +89,38 @@ offers_data = {
     },
     8: {
         'target': {
-        'target': 'Q',
-        'quantity': 3
-
-        }
+            'item': 'Q',
+            'quantity': 3
+        },
+        'required': {
+            'item': 'Q',
+            'quantity': 3
+        },
+        'saving': 10
+    },
+    9: {
+        'target': {
+            'item': 'Q',
+            'quantity': 1
+        },
+        'required': {
+            'item': 'R',
+            'quantity': 'R'
+        },
+        'saving': 30
+    },
+    10: {
+        'target': {
+            'item': 'U',
+            'quantity': 1
+        },
+        'required': {
+            'item': 'U',
+            'quantity': 3
+        },
+        'saving': 40
+    },
+    11: {
+        
     }
 }
