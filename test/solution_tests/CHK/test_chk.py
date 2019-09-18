@@ -32,7 +32,13 @@ class TestCheckout():
             'KK': 150,
             'NNN': 120,
             'NNNM': 120,
-            'NNNMM': 135
+            'NNNMM': 135,
+            'PPPPP': 200,
+            'PPPPPPPPPP': 400,
+            'QQQ': 80,
+            'RRR': 150,
+            'RRRQ': 150,
+            'QQQRRQ': 190 
         }
         for k, v in test_cases.items():
             assert checkout_solution.checkout(k) == v

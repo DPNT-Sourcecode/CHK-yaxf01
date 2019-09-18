@@ -78,6 +78,3 @@ items_data = {
 		'price': 50
 	}
 }
-
-
-

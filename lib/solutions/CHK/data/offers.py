@@ -105,7 +105,7 @@ offers_data = {
         },
         'required': {
             'item': 'R',
-            'quantity': 'R'
+            'quantity': 3
         },
         'saving': 30
     },
