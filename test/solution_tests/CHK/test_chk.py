@@ -6,44 +6,46 @@ class TestCheckout():
         for input in invalid_inputs:
             assert checkout_solution.checkout(input) == -1
 
-    def test_checkout_returns_0_for_empty_cart(self):
-        assert checkout_solution.checkout("") == 0
-
-    def test_checkout_returns_total_value_for_single_item(self):
-        assert checkout_solution.checkout('A') == 50
+    # def test_checkout_returns_total_value_for_single_item(self):
+    #     assert checkout_solution.checkout('A') == 50
     
-    # def test_checkout_can_handle_caps_and_lower(self):
-    #     inputs = ["a", 'A', 'AB', 'aB', 'Ab']
-    #     for input in inputs:
-    #         assert checkout_solution.checkout(input) != -1
+    # # def test_checkout_can_handle_caps_and_lower(self):
+    # #     inputs = ["a", 'A', 'AB', 'aB', 'Ab']
+    # #     for input in inputs:
+    # #         assert checkout_solution.checkout(input) != -1
 
-    def test_checkout_returns_total_with_offer_applied(self):
-        assert checkout_solution.checkout('AAA') == 130
+    # def test_checkout_returns_total_with_offer_applied(self):
+    #     assert checkout_solution.checkout('AAA') == 130
 
-    def test_checkout_returns_total_with_mixed_offers_and_single(self):
-        assert checkout_solution.checkout('ABAA') == 160        
+    # def test_checkout_returns_total_with_mixed_offers_and_single(self):
+    #     assert checkout_solution.checkout('ABAA') == 160        
 
-    def test_checkout_returns_total_with_mixed_input(self):
-        assert checkout_solution.checkout('ABCa') == -1
+    # def test_checkout_returns_total_with_mixed_input(self):
+    #     assert checkout_solution.checkout('ABCa') == -1
 
-    def test_checkout(self):
-        assert checkout_solution.checkout("AA") == 100
+    # def test_checkout(self):
+    #     assert checkout_solution.checkout("AA") == 100
 
-    def test_checkout_with_multi_offers(self):
-        assert checkout_solution.checkout('AAAAABBEE') == 310
+    # def test_checkout_with_multi_offers(self):
+    #     assert checkout_solution.checkout('AAAAABBEE') == 310
 
-    def test_checkout_with_multi_offers_on_same_item(self):
-        assert checkout_solution.checkout('AAAAAAAA') == 330
+    # def test_checkout_with_multi_offers_on_same_item(self):
+    #     assert checkout_solution.checkout('AAAAAAAA') == 330
 
-    def test_CHK_R2_024(self):
-        assert checkout_solution.checkout('EEB') == 80
+    # def test_CHK_R2_024(self):
+    #     assert checkout_solution.checkout('EEB') == 80
 
-    def test(self):
+    def test_checkout_returns_correct_price(self):
         test_cases = {
+            '': 0,
+            'a': -1,
             'A': 50,
             'AA': 100,
             'AAA' : 130,
-            'AAAAA': 150
+            'AAAAA': 200,
+            'B' : 30,
+            'BB' : 45,
+            'BBEE' : 110
         }
         for k, v in test_cases.items():
             assert checkout_solution.checkout(k) == v
