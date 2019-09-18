@@ -27,7 +27,12 @@ class TestCheckout():
             'FFF': 20,
             'FF': 20,
             'HHHHH': 45,
-            'HHHHHHHHHH': 80
+            'HHHHHHHHHH': 80,
+            'HHHHHHHHHHHHH': 110,
+            'KK': 150,
+            'NNN': 120,
+            'NNNM': 120,
+            'NNNMM': 135
         }
         for k, v in test_cases.items():
             assert checkout_solution.checkout(k) == v
