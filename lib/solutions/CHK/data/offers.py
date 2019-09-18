@@ -1,4 +1,4 @@
-offers = {
+offers_data = {
     0: {
         'target': {
             'item': 'A',
@@ -55,3 +55,5 @@ offers = {
         'saving': 10
     }
 }
+
+return offers_data
