@@ -15,6 +15,8 @@ def checkout(skus):
 
     unique_items = list(set(skus))
     eligible_items = selected_items
+    #  This whole section needs refactoring, way too much going on
+    # Logic should be abstracted
     for uitem in unique_items:
         available_offers = _get_available_offers(uitem)
         if available_offers:
