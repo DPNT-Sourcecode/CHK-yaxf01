@@ -116,7 +116,7 @@ offers_data = {
         },
         'required': {
             'item': 'U',
-            'quantity': 3
+            'quantity': 4
         },
         'saving': 40
     },
