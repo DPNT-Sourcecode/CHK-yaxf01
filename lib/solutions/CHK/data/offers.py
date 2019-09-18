@@ -141,5 +141,27 @@ offers_data = {
             'quantity': 3
         },
         'saving': 20
+    },
+    12: {
+        'target': {
+            'item': 'H',
+            'quantity': 5
+        },
+        'required': {
+            'item': 'H',
+            'quantity': 5
+        },
+        'saving': 5
+    },
+    13: {
+        'target': {
+            'item': 'H',
+            'quantity': 10
+        },
+        'required': {
+            'item': 'H',
+            'quantity': 10
+        },
+        'saving': 20
     }
 }
