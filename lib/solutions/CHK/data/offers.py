@@ -53,7 +53,7 @@ offers_data = {
             'quantity': 3
         },
         'saving': 10
-    }
+    },
     5: {
         'target': {
             'item': 'K',
@@ -85,7 +85,7 @@ offers_data = {
             'item': 'P',
             'quantity': 5
         },
-        saving: 50
+        'saving': 50
     },
     8: {
         'target': {
@@ -121,6 +121,25 @@ offers_data = {
         'saving': 40
     },
     11: {
-        
+        'target': {
+            'item': 'V',
+            'quantity': 2
+        },
+        'required': {
+            'item': 'V',
+            'quantity': 2
+        },
+        'saving': 10
+    },
+    11: {
+        'target': {
+            'item': 'V',
+            'quantity': 3
+        },
+        'required': {
+            'item': 'V',
+            'quantity': 3
+        },
+        'saving': 20
     }
 }

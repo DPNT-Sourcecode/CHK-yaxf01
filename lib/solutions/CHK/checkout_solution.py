@@ -5,7 +5,6 @@ import sys
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
-    print(sys.path)
     if _check_valid_input(skus) == False:
         return -1
 
