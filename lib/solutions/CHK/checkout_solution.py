@@ -1,4 +1,5 @@
 from lib.solutions.CHK.data.offers import offers_data
+from lib.solutions.CHK.data.items import items_data
 import sys
 
 # noinspection PyUnusedLocal
@@ -14,7 +15,7 @@ def checkout(skus):
 
     selected_items = list(skus)
     for selected_item in selected_items:
-        totalprice = totalprice + items[selected_item]['price']
+        totalprice = totalprice + items_data[selected_item]['price']
 
     unique_items = list(set(skus))
     eligible_items = selected_items
@@ -62,7 +63,7 @@ def _check_valid_input(skus):
     skus = list(skus)
 
     for item in skus:
-        if item not in items:
+        if item not in items_data:
             return False
 
 def _get_available_offers(item_id):
@@ -72,27 +73,3 @@ def _get_available_offers(item_id):
             available_offers[k] = v
         
     return available_offers
-
-items = {
-        'A':{
-            'price': 50,
-        },
-        'B':{
-            'price': 30,
-        },     
-        'C':{
-            'price': 20
-        },
-        'D':{
-            'price': 15
-        },
-        'E': {
-            'price': 40
-        },
-        'F' : {
-            'price': 10
-        }          
-}
-
-# This is horrible, should really be in a database or something
-# Would be a good in a relationaldb 
