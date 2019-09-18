@@ -133,4 +133,3 @@ offers = {
         'saving': 30
     }
 }
-
