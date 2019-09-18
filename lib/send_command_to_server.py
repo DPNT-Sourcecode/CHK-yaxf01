@@ -11,7 +11,6 @@ from runner.utils import Utils
 from runner.user_input_action import get_user_input
 
 
-print(sys.path)
 """
   ~~~~~~~~~~ Running the system: ~~~~~~~~~~~~~
  
@@ -68,3 +67,4 @@ ChallengeSession\
     .with_config(Utils.get_config())\
     .with_action_provider(lambda: get_user_input(sys.argv[1:]))\
     .start()
+
